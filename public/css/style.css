@@ -1,0 +1,213 @@
+/* ---------------------------------------------------- */
+/* การตั้งค่าพื้นฐานสำหรับหน้าเว็บ */
+/* ---------------------------------------------------- */
+body {
+    font-family: 'Poppins', Tahoma, sans-serif;
+    /* ใช้ฟอนต์ที่ดูทันสมัย */
+    margin: 0;
+    padding: 0;
+    background-color: #f7f3e9;
+    /* ปรับสีพื้นหลังให้ดูอบอุ่นและสบายตาขึ้น */
+    color: #4a4a4a;
+}
+
+/* ---------------------------------------------------- */
+/* การออกแบบส่วนหัว (Header) */
+/* ---------------------------------------------------- */
+header {
+    background-color: #a55a00;
+    /* สีน้ำตาลเข้มที่ดูหรูหรา */
+    color: #fff;
+    padding: 1.5rem 2rem;
+    /* เพิ่ม padding ให้ดูมีพื้นที่มากขึ้น */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงาให้ดูมีมิติ */
+}
+
+/* ---------------------------------------------------- */
+/* การออกแบบเมนูนำทาง (Navigation) */
+/* ---------------------------------------------------- */
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    /* ทำให้ตัวอักษรดูหนาขึ้น */
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+    /* เพิ่ม Effect เปลี่ยนสีเมื่อ Hover */
+}
+
+nav a:hover {
+    color: #ffc107;
+    /* เปลี่ยนเป็นสีทองเมื่อชี้ */
+}
+
+
+/* ---------------------------------------------------- */
+/* การออกแบบส่วนเนื้อหาหลัก (Main Content) */
+/* ---------------------------------------------------- */
+.container {
+    max-width: 1200px;
+    /* จำกัดความกว้างของเนื้อหา */
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    text-align: center;
+    color: #a55a00;
+    margin-bottom: 30px;
+}
+
+.p1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #08010cec;
+    margin-bottom: 30px;
+}
+
+h1.page-title {
+    text-align: center;
+    color: #a55a00;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h1.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #ffc107;
+    /* เส้นใต้สีทอง */
+}
+
+/* ---------------------------------------------------- */
+/* การออกแบบตารางรายการอาหาร (Menu Grid) */
+/* ---------------------------------------------------- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* ปรับขนาด minmax ให้เหมาะกับรูปภาพที่ใหญ่ขึ้น */
+    gap: 2rem;
+    /* เพิ่มระยะห่างระหว่างการ์ดให้มากขึ้น */
+    padding: 1rem;
+}
+
+.menu-card {
+    background: #fff;
+    border-radius: 12px;
+    /* เพิ่มความโค้งมนให้ดูนุ่มนวล */
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    /* เพิ่มความลึกของเงา */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* เพิ่ม Animation */
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    /* การ์ดจะยกขึ้นเล็กน้อยเมื่อชี้ */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    /* เพิ่มความสูงของรูปภาพ */
+    object-fit: cover;
+    display: block;
+}
+
+.menu-card-body {
+    padding: 1.5rem;
+}
+
+.menu-card-body h3 {
+    margin-top: 0;
+    color: #a55a00;
+    font-size: 1.5rem;
+
+
+}
+
+.menu-card-body p {
+    color: #666;
+    font-size: 1rem;
+
+}
+
+/* จัดหน้า detail ให้กึ่งกลาง */
+.detail-container {
+    max-width: 550px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    background: #faf3f3;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ขนาดภาพในหน้า detail */
+.detail-img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+/* คำอธิบาย */
+.detail-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* ปุ่มกลับ */
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #a55a00;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #e68900;
+}
+
+/* ---------------------------------------------------- */
+/* การออกแบบส่วนท้าย (Footer) */
+/* ---------------------------------------------------- */
+footer {
+    background-color: #a55a00;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+.center-image {
+    display: block;
+    /* ให้ภาพเป็น block เพื่อใช้ margin auto ได้ */
+    margin: 0 auto;
+    /* จัดภาพให้อยู่ตรงกลางแนวนอน */
+    max-width: 50%;
+    /* กำหนดความกว้างสูงสุดเป็น 80% ของหน้าจอ */
+    height: auto;
+    /* ให้ภาพปรับสัดส่วนอัตโนมัติ */
+    border-radius: 20px;
+    /* ทำขอบมน */
+}

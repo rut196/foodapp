@@ -1,0 +1,355 @@
+/* style1.css - Enhanced Thai Restaurant Website Styles */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Typography */
+.page-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #d4552b;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* Menu Grid Styles */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.menu-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-card-img {
+    transform: scale(1.05);
+}
+
+.menu-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(212, 85, 43, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-card:hover .menu-card-overlay {
+    opacity: 1;
+}
+
+.view-details-btn {
+    background: white;
+    color: #d4552b;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.view-details-btn:hover {
+    background: #d4552b;
+    color: white;
+    transform: scale(1.05);
+}
+
+.menu-card-content {
+    padding: 25px;
+}
+
+.menu-card-title {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.menu-card-description {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+.menu-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #d4552b;
+}
+
+.add-to-cart-btn {
+    background: linear-gradient(135deg, #d4552b, #e67e22);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 85, 43, 0.3);
+}
+
+.add-to-cart-btn:hover {
+    background: linear-gradient(135deg, #c0392b, #d35400);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 85, 43, 0.4);
+}
+
+/* About Page Styles */
+.about-container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.student-info {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.photo-section {
+    text-align: center;
+}
+
+.student-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid #d4552b;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+    padding: 20px 0;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1em;
+}
+
+.info-table tr {
+    border-bottom: 1px solid #eee;
+}
+
+.info-table td {
+    padding: 15px 20px;
+    vertical-align: top;
+}
+
+.info-table .label {
+    font-weight: 600;
+    color: #555;
+    width: 150px;
+}
+
+.info-table .value {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .page-title {
+        font-size: 2em;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .menu-card-image {
+        height: 200px;
+    }
+
+    .student-info {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .student-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .info-table .label {
+        width: 120px;
+    }
+
+    .about-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.8em;
+    }
+
+    .menu-card-content {
+        padding: 20px;
+    }
+
+    .menu-card-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .add-to-cart-btn {
+        width: 100%;
+    }
+
+    .info-table td {
+        padding: 12px 15px;
+    }
+
+    .info-table .label {
+        width: 100px;
+        font-size: 0.95em;
+    }
+}
+
+/* Animation Effects */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-card,
+.student-info {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.menu-card:nth-child(even) {
+    animation-delay: 0.1s;
+}
+
+.menu-card:nth-child(3n) {
+    animation-delay: 0.2s;
+}
+
+/* Loading States */
+.menu-card-img {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+
+    .menu-card-overlay,
+    .add-to-cart-btn,
+    .view-details-btn,
+    .social-links {
+        display: none;
+    }
+
+    .menu-card,
+    .about-section {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .page-title {
+        color: #333;
+    }
+}

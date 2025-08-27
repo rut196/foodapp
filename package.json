@@ -1,0 +1,30 @@
+{
+  "name": "foodapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "escape-html": "^1.0.3",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
+    "mysql2": "^3.14.3",
+    "nodemon": "^3.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rut196/foodapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rut196/foodapp/issues"
+  },
+  "homepage": "https://github.com/rut196/foodapp#readme"
+}
